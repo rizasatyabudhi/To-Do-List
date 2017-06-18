@@ -19,6 +19,11 @@ $("input[type='text']").keypress(function(event){
         //clear the input
         $(this).val("");
         //input to the list
-        $("ul").append("<li> <span>X </span>" + newTodo + "</li>")
+        $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + newTodo + "</li>")
     }
 });
+
+//When the "+" is pressed, fadeOut the input"
+$(".fa-plus").on("click",function(){
+    $("input[type='text']").fadeToggle();
+})
